@@ -1,0 +1,12 @@
+__RESIDUAL__:
+  NewSynonym: 237
+  NodeRename: 207
+  EdgeDeletion: 210
+  NodeMove: 164
+  NodeDirectMerge: 39
+  RemoveSynonym: 105
+  NodeObsoletion: 1
+  ClassCreation: 300
+  NodeCreation: 1
+  All_Obsoletion: 40
+  All_Synonym: 342

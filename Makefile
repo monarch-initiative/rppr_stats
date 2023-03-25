@@ -43,7 +43,7 @@ stats/mondo_diff.txt:
 	$(eval END := 2023-03-01)
 	$(eval ID := mondo)
 	make ontologies/$(ID)_$(START).obo ontologies/$(ID)_$(END).obo
-	#runoak -i simpleobo:ontologies/$(ID)_$(START).obo diff -X simpleobo:ontologies/$(ID)_$(END).obo -o $@.yaml --statistics
+	runoak -i simpleobo:ontologies/$(ID)_$(START).obo diff -X simpleobo:ontologies/$(ID)_$(END).obo --statistics -o $@.yaml
 	robot diff --left ontologies/$(ID)_$(START).obo --right ontologies/$(ID)_$(END).obo -o $@
 .PRECIOUS: stats/mondo_diff.txt
 
@@ -53,7 +53,7 @@ stats/maxo_diff.txt:
 	$(eval END := 2023-03-09)
 	$(eval ID := maxo)
 	make ontologies/$(ID)_$(START).obo ontologies/$(ID)_$(END).obo
-	#runoak -i simpleobo:ontologies/$(ID)_$(START).obo diff -X simpleobo:ontologies/$(ID)_$(END).obo --statistics -o $@.yaml
+	runoak --stacktrace -i simpleobo:ontologies/$(ID)_$(START).obo diff -X simpleobo:ontologies/$(ID)_$(END).obo --statistics -o $@.yaml
 	robot diff --left ontologies/$(ID)_$(START).obo --right ontologies/$(ID)_$(END).obo -o $@
 .PRECIOUS: stats/maxo_diff.txt
 
@@ -63,7 +63,7 @@ stats/hp_diff.txt:
 	$(eval END := 2023-01-27)
 	$(eval ID := hp)
 	make ontologies/$(ID)_$(START).obo ontologies/$(ID)_$(END).obo
-	#runoak -i simpleobo:ontologies/$(ID)_$(START).obo diff -X simpleobo:ontologies/$(ID)_$(END).obo --statistics -o $@.yaml
+	runoak -i simpleobo:ontologies/$(ID)_$(START).obo diff -X simpleobo:ontologies/$(ID)_$(END).obo --statistics -o $@.yaml
 	robot diff --left ontologies/$(ID)_$(START).obo --right ontologies/$(ID)_$(END).obo -o $@
 .PRECIOUS: stats/hp_diff.txt
 
@@ -74,5 +74,3 @@ stats/%_diff_summary.txt: stats/%_diff.txt
 	grep -E "[+] AnnotationAssertion.*IAO_0000115" $< | wc -l >> $@
 	echo "New or updated synonyms: " >> $@
 	grep -E "[+] AnnotationAssertion.*Synonym" $< | wc -l >> $@
-
-https://github.com/obophenotype/human-phenotype-ontology/releases/download/v2023-03-01/hp-base.obo
