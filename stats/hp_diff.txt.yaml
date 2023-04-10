@@ -1,10 +1,12 @@
 __RESIDUAL__:
-  NewSynonym: 237
   NodeRename: 207
+  NodeTextDefinitionChange: 64
+  RemoveSynonym: 105
   EdgeDeletion: 210
   NodeMove: 164
+  NewSynonym: 237
   NodeDirectMerge: 39
-  RemoveSynonym: 105
+  NewTextDefinition: 50
   NodeObsoletion: 1
   ClassCreation: 300
   NodeCreation: 1

@@ -1,15 +1,17 @@
 __RESIDUAL__:
-  SynonymPredicateChange: 276
-  EdgeDeletion: 8412
-  NodeMove: 2366
   PredicateChange: 2080
-  NodeObsoletionWithDirectReplacement: 39
-  RemoveSynonym: 308
-  NodeRename: 215
+  EdgeDeletion: 8412
   NewSynonym: 350
-  NodeDeletion: 1
+  NodeRename: 215
+  NodeMove: 2366
   NodeObsoletion: 55
-  NodeCreation: 4
+  NodeTextDefinitionChange: 222
+  RemoveSynonym: 308
+  NewTextDefinition: 55
+  SynonymPredicateChange: 276
+  NodeObsoletionWithDirectReplacement: 39
+  NodeDeletion: 1
   ClassCreation: 512
+  NodeCreation: 4
   All_Obsoletion: 94
   All_Synonym: 934
