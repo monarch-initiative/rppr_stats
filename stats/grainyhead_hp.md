@@ -1,14 +1,14 @@
-From 2022-07-01 to 2023-06-30
+From 2020-09-15 to 2023-09-07
 
-| Event                | Total    | Internal | Inte (%) | External | Exte (%) |
-| -------------------- | -------- | -------- | -------- | -------- | -------- |
-| Contributors         |       65 |        7 |    10.77 |       58 |    89.23 |
-| Issues opened        |     2061 |     1918 |    93.06 |      143 |     6.94 |
-| Issues closed        |      609 |      607 |    99.67 |        2 |     0.33 |
-| Pull requests opened |       31 |       25 |    80.65 |        6 |    19.35 |
-| Pull requests closed |       26 |       26 |   100.00 |        0 |     0.00 |
-| Pull requests merged |       23 |       23 |   100.00 |        0 |     0.00 |
-| Comments             |     1387 |     1066 |    76.86 |      321 |    23.14 |
-| Commits              |      170 |      166 |    97.65 |        4 |     2.35 |
-| Releases             |        3 |        3 |   100.00 |        0 |     0.00 |
+| Event | Total | Internal | Internal (%) | External | External (%) |
+| -------- | -------- | -------- | -------- | -------- | -------- |
+| Contributors | 177 | 8 |  4.52 | 169 |  95.48 |
+| Issues opened | 3715 | 2536 |  68.26 | 1179 |  31.74 |
+| Issues closed | 2554 | 2536 |  99.30 | 18 |  0.70 |
+| Pull requests opened | 141 | 125 |  88.65 | 16 |  11.35 |
+| Pull requests closed | 136 | 134 |  98.53 | 2 |  1.47 |
+| Pull requests merged | 118 | 118 |  100.00 | 0 |  0.00 |
+| Comments | 5159 | 4097 |  79.41 | 1062 |  20.59 |
+| Commits | 848 | 830 |  97.88 | 18 |  2.12 |
+| Releases | 19 | 19 |  100.00 | 0 |  0.00 |
 

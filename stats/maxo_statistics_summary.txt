@@ -1,0 +1,906 @@
+id: obo:maxo/releases/2023-06-06maxo.owl-statistics
+ontologies:
+- id: maxo
+  version: obo:maxo/releases/2023-06-06maxo.owl
+was_generated_by:
+  started_at_time: '2023-07-08T18:05:37.064408'
+  was_associated_with: OAK
+  acted_on_behalf_of: matentzn
+partitions:
+  BFO:
+    id: BFO
+    class_count: 15
+    deprecated_class_count: 0
+    non_deprecated_class_count: 15
+    class_count_with_text_definitions: 9
+    class_count_without_text_definitions: 6
+    edge_count_by_predicate:
+      rdfs:subClassOf:
+        facet: rdfs:subClassOf
+        filtered_count: 14
+      BFO:0000050:
+        facet: BFO:0000050
+        filtered_count: 7
+      rdfs:subPropertyOf:
+        facet: rdfs:subPropertyOf
+        filtered_count: 4
+      owl:inverseOf:
+        facet: owl:inverseOf
+        filtered_count: 3
+      rdfs:domain:
+        facet: rdfs:domain
+        filtered_count: 3
+      rdfs:range:
+        facet: rdfs:range
+        filtered_count: 3
+    distinct_synonym_count: 0
+    synonym_statement_count: 0
+    edge_count: 34
+  CHEBI:
+    id: CHEBI
+    class_count: 2084
+    deprecated_class_count: 771
+    non_deprecated_class_count: 1313
+    class_count_with_text_definitions: 1014
+    class_count_without_text_definitions: 1070
+    edge_count_by_predicate:
+      rdfs:subClassOf:
+        facet: rdfs:subClassOf
+        filtered_count: 1940
+      has_functional_parent:
+        facet: has_functional_parent
+        filtered_count: 59
+      is_conjugate_base_of:
+        facet: is_conjugate_base_of
+        filtered_count: 166
+      RO:0000087:
+        facet: RO:0000087
+        filtered_count: 446
+      is_conjugate_acid_of:
+        facet: is_conjugate_acid_of
+        filtered_count: 166
+      has_parent_hydride:
+        facet: has_parent_hydride
+        filtered_count: 16
+      BFO:0000051:
+        facet: BFO:0000051
+        filtered_count: 72
+      is_tautomer_of:
+        facet: is_tautomer_of
+        filtered_count: 52
+      is_enantiomer_of:
+        facet: is_enantiomer_of
+        filtered_count: 38
+      is_substituent_group_from:
+        facet: is_substituent_group_from
+        filtered_count: 14
+    distinct_synonym_count: 5221
+    synonym_statement_count: 5423
+    edge_count: 2969
+  CL:
+    id: CL
+    class_count: 874
+    deprecated_class_count: 0
+    non_deprecated_class_count: 874
+    class_count_with_text_definitions: 767
+    class_count_without_text_definitions: 107
+    edge_count_by_predicate:
+      rdfs:subClassOf:
+        facet: rdfs:subClassOf
+        filtered_count: 1341
+      BFO:0000051:
+        facet: BFO:0000051
+        filtered_count: 48
+      RO:0002160:
+        facet: RO:0002160
+        filtered_count: 6
+      RO:0002202:
+        facet: RO:0002202
+        filtered_count: 128
+      RO:0002216:
+        facet: RO:0002216
+        filtered_count: 3
+      RO:0002215:
+        facet: RO:0002215
+        filtered_count: 120
+      RO:0000053:
+        facet: RO:0000053
+        filtered_count: 31
+      RO:0000056:
+        facet: RO:0000056
+        filtered_count: 6
+      RO:0002162:
+        facet: RO:0002162
+        filtered_count: 6
+      CL:4030046:
+        facet: CL:4030046
+        filtered_count: 227
+      RO:0002104:
+        facet: RO:0002104
+        filtered_count: 122
+      RO:0003000:
+        facet: RO:0003000
+        filtered_count: 5
+      RO:0002220:
+        facet: RO:0002220
+        filtered_count: 6
+      BFO:0000050:
+        facet: BFO:0000050
+        filtered_count: 406
+      RO:0015015:
+        facet: RO:0015015
+        filtered_count: 21
+      RO:0002100:
+        facet: RO:0002100
+        filtered_count: 16
+      RO:0001025:
+        facet: RO:0001025
+        filtered_count: 3
+      CL:4030045:
+        facet: CL:4030045
+        filtered_count: 8
+      RO:0002203:
+        facet: RO:0002203
+        filtered_count: 5
+      RO:0015016:
+        facet: RO:0015016
+        filtered_count: 11
+      CL:4030044:
+        facet: CL:4030044
+        filtered_count: 5
+      RO:0002353:
+        facet: RO:0002353
+        filtered_count: 4
+      RO:0002388:
+        facet: RO:0002388
+        filtered_count: 1
+      RO:0002120:
+        facet: RO:0002120
+        filtered_count: 1
+      RO:0002491:
+        facet: RO:0002491
+        filtered_count: 1
+    distinct_synonym_count: 868
+    synonym_statement_count: 903
+    edge_count: 2531
+  FOODON:
+    id: FOODON
+    class_count: 362
+    deprecated_class_count: 0
+    non_deprecated_class_count: 362
+    class_count_with_text_definitions: 197
+    class_count_without_text_definitions: 165
+    edge_count_by_predicate:
+      rdfs:subClassOf:
+        facet: rdfs:subClassOf
+        filtered_count: 469
+      RO:0001000:
+        facet: RO:0001000
+        filtered_count: 81
+      RO:0002350:
+        facet: RO:0002350
+        filtered_count: 31
+      RO:0002353:
+        facet: RO:0002353
+        filtered_count: 2
+      FOODON:00002420:
+        facet: FOODON:00002420
+        filtered_count: 1
+      OBI:0000299:
+        facet: OBI:0000299
+        filtered_count: 2
+      RO:0000087:
+        facet: RO:0000087
+        filtered_count: 1
+      RO:0002162:
+        facet: RO:0002162
+        filtered_count: 18
+      FOODON:00001563:
+        facet: FOODON:00001563
+        filtered_count: 1
+      RO:0003001:
+        facet: RO:0003001
+        filtered_count: 1
+      RO:0000086:
+        facet: RO:0000086
+        filtered_count: 6
+      RO:0002351:
+        facet: RO:0002351
+        filtered_count: 3
+      BFO:0000050:
+        facet: BFO:0000050
+        filtered_count: 2
+      OBI:0000293:
+        facet: OBI:0000293
+        filtered_count: 1
+      rdfs:subPropertyOf:
+        facet: rdfs:subPropertyOf
+        filtered_count: 2
+    distinct_synonym_count: 147
+    synonym_statement_count: 156
+    edge_count: 621
+  GO:
+    id: GO
+    class_count: 2154
+    deprecated_class_count: 300
+    non_deprecated_class_count: 1854
+    class_count_with_text_definitions: 1858
+    class_count_without_text_definitions: 296
+    edge_count_by_predicate:
+      rdfs:subClassOf:
+        facet: rdfs:subClassOf
+        filtered_count: 3337
+      RO:0002211:
+        facet: RO:0002211
+        filtered_count: 325
+      BFO:0000050:
+        facet: BFO:0000050
+        filtered_count: 237
+      BFO:0000051:
+        facet: BFO:0000051
+        filtered_count: 34
+      RO:0002212:
+        facet: RO:0002212
+        filtered_count: 283
+      RO:0002213:
+        facet: RO:0002213
+        filtered_count: 285
+      BFO:0000066:
+        facet: BFO:0000066
+        filtered_count: 29
+    distinct_synonym_count: 5389
+    synonym_statement_count: 5433
+    edge_count: 4530
+  HP:
+    id: HP
+    class_count: 3680
+    deprecated_class_count: 1158
+    non_deprecated_class_count: 2522
+    class_count_with_text_definitions: 2130
+    class_count_without_text_definitions: 1550
+    edge_count_by_predicate:
+      rdfs:subClassOf:
+        facet: rdfs:subClassOf
+        filtered_count: 3876
+    distinct_synonym_count: 4866
+    synonym_statement_count: 4866
+    edge_count: 3876
+  IAO:
+    id: IAO
+    class_count: 6
+    deprecated_class_count: 0
+    non_deprecated_class_count: 6
+    class_count_with_text_definitions: 4
+    class_count_without_text_definitions: 2
+    edge_count_by_predicate:
+      rdfs:subClassOf:
+        facet: rdfs:subClassOf
+        filtered_count: 6
+    distinct_synonym_count: 0
+    synonym_statement_count: 0
+    edge_count: 6
+  MAXO:
+    id: MAXO
+    class_count: 1815
+    deprecated_class_count: 57
+    non_deprecated_class_count: 1758
+    class_count_with_text_definitions: 1758
+    class_count_without_text_definitions: 57
+    edge_count_by_predicate:
+      rdfs:subClassOf:
+        facet: rdfs:subClassOf
+        filtered_count: 2503
+      RO:0002233:
+        facet: RO:0002233
+        filtered_count: 111
+      MAXO:0000521:
+        facet: MAXO:0000521
+        filtered_count: 20
+      MAXO:0000864:
+        facet: MAXO:0000864
+        filtered_count: 13
+      MAXO:0001015:
+        facet: MAXO:0001015
+        filtered_count: 11
+      MAXO:0001027:
+        facet: MAXO:0001027
+        filtered_count: 76
+      BFO:0000051:
+        facet: BFO:0000051
+        filtered_count: 7
+    distinct_synonym_count: 4701
+    synonym_statement_count: 4701
+    edge_count: 2741
+  NBO:
+    id: NBO
+    class_count: 36
+    deprecated_class_count: 4
+    non_deprecated_class_count: 32
+    class_count_with_text_definitions: 29
+    class_count_without_text_definitions: 7
+    edge_count_by_predicate:
+      rdfs:subClassOf:
+        facet: rdfs:subClassOf
+        filtered_count: 35
+      by_means:
+        facet: by_means
+        filtered_count: 1
+      RO:0002211:
+        facet: RO:0002211
+        filtered_count: 4
+    distinct_synonym_count: 22
+    synonym_statement_count: 22
+    edge_count: 40
+  NCBITaxon:
+    id: NCBITaxon
+    class_count: 185
+    deprecated_class_count: 28
+    non_deprecated_class_count: 157
+    class_count_with_text_definitions: 0
+    class_count_without_text_definitions: 185
+    edge_count_by_predicate:
+      rdfs:subClassOf:
+        facet: rdfs:subClassOf
+        filtered_count: 160
+    distinct_synonym_count: 210
+    synonym_statement_count: 232
+    edge_count: 160
+  OBI:
+    id: OBI
+    class_count: 14
+    deprecated_class_count: 0
+    non_deprecated_class_count: 14
+    class_count_with_text_definitions: 14
+    class_count_without_text_definitions: 0
+    edge_count_by_predicate:
+      rdfs:subClassOf:
+        facet: rdfs:subClassOf
+        filtered_count: 14
+    distinct_synonym_count: 0
+    synonym_statement_count: 0
+    edge_count: 14
+  PATO:
+    id: PATO
+    class_count: 281
+    deprecated_class_count: 42
+    non_deprecated_class_count: 239
+    class_count_with_text_definitions: 236
+    class_count_without_text_definitions: 45
+    edge_count_by_predicate:
+      rdfs:subClassOf:
+        facet: rdfs:subClassOf
+        filtered_count: 315
+      RO:0015012:
+        facet: RO:0015012
+        filtered_count: 5
+      BFO:0000051:
+        facet: BFO:0000051
+        filtered_count: 1
+      RO:0015011:
+        facet: RO:0015011
+        filtered_count: 2
+      RO:0015007:
+        facet: RO:0015007
+        filtered_count: 1
+      RO:0015008:
+        facet: RO:0015008
+        filtered_count: 1
+      RO:0015010:
+        facet: RO:0015010
+        filtered_count: 2
+    distinct_synonym_count: 201
+    synonym_statement_count: 208
+    edge_count: 327
+  PO:
+    id: PO
+    class_count: 91
+    deprecated_class_count: 40
+    non_deprecated_class_count: 51
+    class_count_with_text_definitions: 51
+    class_count_without_text_definitions: 40
+    edge_count_by_predicate:
+      rdfs:subClassOf:
+        facet: rdfs:subClassOf
+        filtered_count: 55
+      RO:0002202:
+        facet: RO:0002202
+        filtered_count: 7
+      BFO:0000050:
+        facet: BFO:0000050
+        filtered_count: 10
+      RO:0000057:
+        facet: RO:0000057
+        filtered_count: 3
+      BFO:0000051:
+        facet: BFO:0000051
+        filtered_count: 4
+      RO:0000056:
+        facet: RO:0000056
+        filtered_count: 2
+    distinct_synonym_count: 225
+    synonym_statement_count: 229
+    edge_count: 81
+  PR:
+    id: PR
+    class_count: 407
+    deprecated_class_count: 2
+    non_deprecated_class_count: 405
+    class_count_with_text_definitions: 405
+    class_count_without_text_definitions: 2
+    edge_count_by_predicate:
+      rdfs:subClassOf:
+        facet: rdfs:subClassOf
+        filtered_count: 632
+      has_gene_template:
+        facet: has_gene_template
+        filtered_count: 1
+      RO:0002353:
+        facet: RO:0002353
+        filtered_count: 3
+      has_constituent_monomer:
+        facet: has_constituent_monomer
+        filtered_count: 1
+      lacks_part:
+        facet: lacks_part
+        filtered_count: 52
+      RO:0002180:
+        facet: RO:0002180
+        filtered_count: 2
+      RO:0002160:
+        facet: RO:0002160
+        filtered_count: 5
+      RO:0002215:
+        facet: RO:0002215
+        filtered_count: 1
+      BFO:0000051:
+        facet: BFO:0000051
+        filtered_count: 1
+    distinct_synonym_count: 1796
+    synonym_statement_count: 2027
+    edge_count: 698
+  RO:
+    id: RO
+    class_count: 1
+    deprecated_class_count: 0
+    non_deprecated_class_count: 1
+    class_count_with_text_definitions: 1
+    class_count_without_text_definitions: 0
+    edge_count_by_predicate:
+      rdfs:subClassOf:
+        facet: rdfs:subClassOf
+        filtered_count: 1
+      rdfs:range:
+        facet: rdfs:range
+        filtered_count: 46
+      rdfs:domain:
+        facet: rdfs:domain
+        filtered_count: 51
+      rdfs:subPropertyOf:
+        facet: rdfs:subPropertyOf
+        filtered_count: 231
+      owl:inverseOf:
+        facet: owl:inverseOf
+        filtered_count: 41
+    distinct_synonym_count: 11
+    synonym_statement_count: 12
+    edge_count: 370
+  SO:
+    id: SO
+    class_count: 26
+    deprecated_class_count: 1
+    non_deprecated_class_count: 25
+    class_count_with_text_definitions: 25
+    class_count_without_text_definitions: 1
+    edge_count_by_predicate:
+      rdfs:subClassOf:
+        facet: rdfs:subClassOf
+        filtered_count: 24
+      derives_from:
+        facet: derives_from
+        filtered_count: 4
+      BFO:0000050:
+        facet: BFO:0000050
+        filtered_count: 6
+      RO:0002131:
+        facet: RO:0002131
+        filtered_count: 1
+      member_of:
+        facet: member_of
+        filtered_count: 2
+    distinct_synonym_count: 48
+    synonym_statement_count: 50
+    edge_count: 37
+  UBERON:
+    id: UBERON
+    class_count: 4295
+    deprecated_class_count: 148
+    non_deprecated_class_count: 4147
+    class_count_with_text_definitions: 3851
+    class_count_without_text_definitions: 444
+    edge_count_by_predicate:
+      rdfs:subClassOf:
+        facet: rdfs:subClassOf
+        filtered_count: 5776
+      RO:0002150:
+        facet: RO:0002150
+        filtered_count: 59
+      RO:0002433:
+        facet: RO:0002433
+        filtered_count: 316
+      BFO:0000050:
+        facet: BFO:0000050
+        filtered_count: 3054
+      RO:0002176:
+        facet: RO:0002176
+        filtered_count: 180
+      BSPO:0000126:
+        facet: BSPO:0000126
+        filtered_count: 54
+      RO:0002160:
+        facet: RO:0002160
+        filtered_count: 220
+      RO:0002216:
+        facet: RO:0002216
+        filtered_count: 41
+      RO:0002202:
+        facet: RO:0002202
+        filtered_count: 635
+      RO:0002551:
+        facet: RO:0002551
+        filtered_count: 53
+      RO:0002215:
+        facet: RO:0002215
+        filtered_count: 66
+      BFO:0000051:
+        facet: BFO:0000051
+        filtered_count: 413
+      RO:0002495:
+        facet: RO:0002495
+        filtered_count: 51
+      RO:0002473:
+        facet: RO:0002473
+        filtered_count: 126
+      BSPO:0001107:
+        facet: BSPO:0001107
+        filtered_count: 3
+      RO:0002492:
+        facet: RO:0002492
+        filtered_count: 27
+      RO:0002371:
+        facet: RO:0002371
+        filtered_count: 56
+      RO:0000086:
+        facet: RO:0000086
+        filtered_count: 45
+      RO:0002162:
+        facet: RO:0002162
+        filtered_count: 2
+      channel_for:
+        facet: channel_for
+        filtered_count: 25
+      channels_from:
+        facet: channels_from
+        filtered_count: 17
+      channels_into:
+        facet: channels_into
+        filtered_count: 18
+      RO:0002570:
+        facet: RO:0002570
+        filtered_count: 14
+      RO:0002220:
+        facet: RO:0002220
+        filtered_count: 117
+      RO:0002497:
+        facet: RO:0002497
+        filtered_count: 1
+      RO:0002496:
+        facet: RO:0002496
+        filtered_count: 4
+      RO:0002002:
+        facet: RO:0002002
+        filtered_count: 1
+      BFO:0000062:
+        facet: BFO:0000062
+        filtered_count: 10
+      BFO:0000063:
+        facet: BFO:0000063
+        filtered_count: 3
+      RO:0002082:
+        facet: RO:0002082
+        filtered_count: 6
+      RO:0002229:
+        facet: RO:0002229
+        filtered_count: 1
+      RO:0002219:
+        facet: RO:0002219
+        filtered_count: 24
+      RO:0002285:
+        facet: RO:0002285
+        filtered_count: 6
+      RO:0002256:
+        facet: RO:0002256
+        filtered_count: 21
+      RO:0002488:
+        facet: RO:0002488
+        filtered_count: 8
+      RO:0002007:
+        facet: RO:0002007
+        filtered_count: 37
+      RO:0002131:
+        facet: RO:0002131
+        filtered_count: 106
+      RO:0002230:
+        facet: RO:0002230
+        filtered_count: 1
+      RO:0002224:
+        facet: RO:0002224
+        filtered_count: 1
+      RO:0002223:
+        facet: RO:0002223
+        filtered_count: 1
+      RO:0002087:
+        facet: RO:0002087
+        filtered_count: 1
+      RO:0002494:
+        facet: RO:0002494
+        filtered_count: 38
+      extends_fibers_into:
+        facet: extends_fibers_into
+        filtered_count: 39
+      BSPO:0000096:
+        facet: BSPO:0000096
+        filtered_count: 7
+      RO:0002254:
+        facet: RO:0002254
+        filtered_count: 94
+      BSPO:0001106:
+        facet: BSPO:0001106
+        filtered_count: 4
+      RO:0002572:
+        facet: RO:0002572
+        filtered_count: 63
+      subdivision_of:
+        facet: subdivision_of
+        filtered_count: 11
+      RO:0002351:
+        facet: RO:0002351
+        filtered_count: 14
+      RO:0001025:
+        facet: RO:0001025
+        filtered_count: 62
+      RO:0002328:
+        facet: RO:0002328
+        filtered_count: 4
+      RO:0002221:
+        facet: RO:0002221
+        filtered_count: 28
+      RO:0002353:
+        facet: RO:0002353
+        filtered_count: 11
+      RO:0002170:
+        facet: RO:0002170
+        filtered_count: 105
+      RO:0002491:
+        facet: RO:0002491
+        filtered_count: 7
+      RO:0001019:
+        facet: RO:0001019
+        filtered_count: 5
+      RO:0003001:
+        facet: RO:0003001
+        filtered_count: 32
+      RO:0002380:
+        facet: RO:0002380
+        filtered_count: 56
+      RO:0002134:
+        facet: RO:0002134
+        filtered_count: 23
+      RO:0002177:
+        facet: RO:0002177
+        filtered_count: 2
+      RO:0003000:
+        facet: RO:0003000
+        filtered_count: 14
+      RO:0002179:
+        facet: RO:0002179
+        filtered_count: 60
+      BSPO:0000120:
+        facet: BSPO:0000120
+        filtered_count: 30
+      RO:0002178:
+        facet: RO:0002178
+        filtered_count: 69
+      RO:0002493:
+        facet: RO:0002493
+        filtered_count: 5
+      RO:0002489:
+        facet: RO:0002489
+        filtered_count: 6
+      RO:0002387:
+        facet: RO:0002387
+        filtered_count: 147
+      RO:0002373:
+        facet: RO:0002373
+        filtered_count: 14
+      RO:0002372:
+        facet: RO:0002372
+        filtered_count: 16
+      BSPO:0000123:
+        facet: BSPO:0000123
+        filtered_count: 6
+      anteriorly_connected_to:
+        facet: anteriorly_connected_to
+        filtered_count: 27
+      posteriorly_connected_to:
+        facet: posteriorly_connected_to
+        filtered_count: 1
+      proximally_connected_to:
+        facet: proximally_connected_to
+        filtered_count: 44
+      distally_connected_to:
+        facet: distally_connected_to
+        filtered_count: 23
+      BSPO:0001113:
+        facet: BSPO:0001113
+        filtered_count: 4
+      BFO:0000067:
+        facet: BFO:0000067
+        filtered_count: 6
+      BSPO:0001108:
+        facet: BSPO:0001108
+        filtered_count: 4
+      RO:0002005:
+        facet: RO:0002005
+        filtered_count: 10
+      RO:0002568:
+        facet: RO:0002568
+        filtered_count: 8
+      BSPO:0000121:
+        facet: BSPO:0000121
+        filtered_count: 29
+      protects:
+        facet: protects
+        filtered_count: 4
+      RO:0002571:
+        facet: RO:0002571
+        filtered_count: 2
+      RO:0002376:
+        facet: RO:0002376
+        filtered_count: 24
+      sexually_homologous_to:
+        facet: sexually_homologous_to
+        filtered_count: 3
+      RO:0002226:
+        facet: RO:0002226
+        filtered_count: 4
+      RO:0002374:
+        facet: RO:0002374
+        filtered_count: 2
+      filtered_through:
+        facet: filtered_through
+        filtered_count: 3
+      RO:0002576:
+        facet: RO:0002576
+        filtered_count: 39
+      BSPO:0001115:
+        facet: BSPO:0001115
+        filtered_count: 2
+      RO:0002207:
+        facet: RO:0002207
+        filtered_count: 1
+      indirectly_supplies:
+        facet: indirectly_supplies
+        filtered_count: 4
+      RO:0001015:
+        facet: RO:0001015
+        filtered_count: 8
+      BSPO:0000122:
+        facet: BSPO:0000122
+        filtered_count: 8
+      BSPO:0000107:
+        facet: BSPO:0000107
+        filtered_count: 3
+      BSPO:0000108:
+        facet: BSPO:0000108
+        filtered_count: 3
+      site_of:
+        facet: site_of
+        filtered_count: 6
+      BSPO:0000098:
+        facet: BSPO:0000098
+        filtered_count: 3
+      BSPO:0000102:
+        facet: BSPO:0000102
+        filtered_count: 2
+      trunk_part_of:
+        facet: trunk_part_of
+        filtered_count: 1
+      BSPO:0000097:
+        facet: BSPO:0000097
+        filtered_count: 2
+      BSPO:0000100:
+        facet: BSPO:0000100
+        filtered_count: 3
+      BSPO:0000099:
+        facet: BSPO:0000099
+        filtered_count: 3
+      RO:0002385:
+        facet: RO:0002385
+        filtered_count: 12
+      BSPO:0005001:
+        facet: BSPO:0005001
+        filtered_count: 2
+      layer_part_of:
+        facet: layer_part_of
+        filtered_count: 1
+      BSPO:0000124:
+        facet: BSPO:0000124
+        filtered_count: 2
+      BSPO:0015101:
+        facet: BSPO:0015101
+        filtered_count: 5
+      RO:0000056:
+        facet: RO:0000056
+        filtered_count: 3
+      RO:0002225:
+        facet: RO:0002225
+        filtered_count: 1
+      RO:0002103:
+        facet: RO:0002103
+        filtered_count: 1
+      RO:0002180:
+        facet: RO:0002180
+        filtered_count: 1
+    distinct_synonym_count: 14062
+    synonym_statement_count: 14472
+    edge_count: 12886
+  BSPO:
+    id: BSPO
+    class_count: 0
+    deprecated_class_count: 0
+    non_deprecated_class_count: 0
+    class_count_with_text_definitions: 0
+    class_count_without_text_definitions: 0
+    distinct_synonym_count: 0
+    synonym_statement_count: 0
+    edge_count: 0
+  http:
+    id: http
+    class_count: 0
+    deprecated_class_count: 0
+    non_deprecated_class_count: 0
+    class_count_with_text_definitions: 0
+    class_count_without_text_definitions: 0
+    distinct_synonym_count: 0
+    synonym_statement_count: 0
+    edge_count: 0
+  FMA:
+    id: FMA
+    class_count: 1
+    deprecated_class_count: 1
+    non_deprecated_class_count: 0
+    class_count_with_text_definitions: 0
+    class_count_without_text_definitions: 1
+    distinct_synonym_count: 0
+    synonym_statement_count: 0
+    edge_count: 0
+  BS:
+    id: BS
+    class_count: 5
+    deprecated_class_count: 5
+    non_deprecated_class_count: 0
+    class_count_with_text_definitions: 0
+    class_count_without_text_definitions: 5
+    distinct_synonym_count: 0
+    synonym_statement_count: 0
+    edge_count: 0
+  ubprop:
+    id: ubprop
+    class_count: 0
+    deprecated_class_count: 0
+    non_deprecated_class_count: 0
+    class_count_with_text_definitions: 0
+    class_count_without_text_definitions: 0
+    distinct_synonym_count: 0
+    synonym_statement_count: 0
+    edge_count: 0

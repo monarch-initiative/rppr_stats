@@ -1,8 +1,9 @@
 
-START_DATE_P1=2022-08-01
-END_DATE_P1=2023-05-31
-START_DATE_HPO=2022-07-01
-END_DATE_HPO=2023-06-30
+START_DATE=
+END_DATE=
+FIRST_RELEASE=
+LAST_RELEASE=
+ID=
 
 ONTOLOGIES=mondo hp maxo
 GRAINYHEAD_STATS=$(patsubst %, stats/grainyhead_%.md, $(ONTOLOGIES))
@@ -10,17 +11,27 @@ DIFF_STATS=$(patsubst %, stats/%_diff_summary.txt, $(ONTOLOGIES))
 
 all: $(GRAINYHEAD_STATS) $(DIFF_STATS)
 
+p1-rppr-2023:
+	make START_DATE=2022-08-01 END_DATE=2023-05-31 all #This wont work now because we changed the makefile, see below
+
+hpo-nar-2023:
+	make START_DATE=2020-09-15 END_DATE=2023-09-07 FIRST_RELEASE=2020-10-12 LAST_RELEASE=2023-09-01 stats/grainyhead_hp.md stats/hp_diff.txt
+
 stats/grainyhead_hp.md:
 	mkdir -p stats/
-	grainyhead -s hp metrics --from=$(START_DATE_HPO) --to=$(END_DATE_HPO) --team human-phenotype > $@
+	grainyhead -s hp metrics --from=$(START_DATE) --to=$(END_DATE) --team human-phenotype > $@
 
 stats/grainyhead_maxo.md:
 	mkdir -p stats/
-	grainyhead -s maxo metrics --from=$(START_DATE_HPO) --to=$(END_DATE_HPO) --team monarch-ontology-team > $@
+	grainyhead -s maxo metrics --from=$(START_DATE) --to=$(END_DATE) --team monarch-ontology-team > $@
 
 stats/grainyhead_mondo.md:
 	mkdir -p stats/
-	grainyhead -s mondo metrics --from=$(START_DATE_P1) --to=$(END_DATE_P1) --team monarch-ontology-team > $@
+	grainyhead -s mondo metrics --from=$(START_DATE) --to=$(END_DATE) --team monarch-ontology-team > $@
+
+ontologies/latest_%.obo:
+	mkdir -p ontologies/
+	wget "http://purl.obolibrary.org/obo/$*.obo" -O $@
 
 ontologies/mondo_%.obo:
 	mkdir -p ontologies/
@@ -34,37 +45,36 @@ ontologies/hp_2022-06-11.obo:
 	mkdir -p ontologies/
 	wget "https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/v2022-06-11/hp-base.obo" -O $@
 
+ontologies/hp_2020-10-12.obo:
+	mkdir -p ontologies/
+	wget "https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/v2020-10-12/hp-base.obo" -O $@
+
 ontologies/maxo_%.obo:
 	mkdir -p ontologies/
 	wget "http://purl.obolibrary.org/obo/maxo/releases/$*/maxo-base.obo" -O $@
 
 stats/mondo_diff.txt:
-	$(eval START := 2022-08-01)
-	$(eval END := 2023-03-01)
 	$(eval ID := mondo)
-	make ontologies/$(ID)_$(START).obo ontologies/$(ID)_$(END).obo
-	runoak -i simpleobo:ontologies/$(ID)_$(START).obo diff -X simpleobo:ontologies/$(ID)_$(END).obo --statistics -o $@.yaml
-	robot diff --left ontologies/$(ID)_$(START).obo --right ontologies/$(ID)_$(END).obo -o $@
+	mkdir -p stats/
+	$(MAKE) ontologies/$(ID)_$(FIRST_RELEASE).obo ontologies/$(ID)_$(LAST_RELEASE).obo
+	runoak -i simpleobo:ontologies/$(ID)_$(FIRST_RELEASE).obo diff -X simpleobo:ontologies/$(ID)_$(LAST_RELEASE).obo --statistics -o $@.yaml
+	robot diff --left ontologies/$(ID)_$(FIRST_RELEASE).obo --right ontologies/$(ID)_$(LAST_RELEASE).obo -o $@
 .PRECIOUS: stats/mondo_diff.txt
 
 stats/maxo_diff.txt:
-	mkdir -p stats/
-	$(eval START := 2022-06-24)
-	$(eval END := 2023-03-09)
 	$(eval ID := maxo)
-	make ontologies/$(ID)_$(START).obo ontologies/$(ID)_$(END).obo
-	runoak --stacktrace -i simpleobo:ontologies/$(ID)_$(START).obo diff -X simpleobo:ontologies/$(ID)_$(END).obo --statistics -o $@.yaml
-	robot diff --left ontologies/$(ID)_$(START).obo --right ontologies/$(ID)_$(END).obo -o $@
+	mkdir -p stats/
+	$(MAKE) ontologies/$(ID)_$(FIRST_RELEASE).obo ontologies/$(ID)_$(LAST_RELEASE).obo
+	runoak -i simpleobo:ontologies/$(ID)_$(FIRST_RELEASE).obo diff -X simpleobo:ontologies/$(ID)_$(LAST_RELEASE).obo --statistics -o $@.yaml
+	robot diff --left ontologies/$(ID)_$(FIRST_RELEASE).obo --right ontologies/$(ID)_$(LAST_RELEASE).obo -o $@
 .PRECIOUS: stats/maxo_diff.txt
 
 stats/hp_diff.txt:
-	mkdir -p stats/
-	$(eval START := 2022-06-11)
-	$(eval END := 2023-01-27)
 	$(eval ID := hp)
-	make ontologies/$(ID)_$(START).obo ontologies/$(ID)_$(END).obo
-	runoak -i simpleobo:ontologies/$(ID)_$(START).obo diff -X simpleobo:ontologies/$(ID)_$(END).obo --statistics -o $@.yaml
-	robot diff --left ontologies/$(ID)_$(START).obo --right ontologies/$(ID)_$(END).obo -o $@
+	mkdir -p stats/
+	$(MAKE) ontologies/$(ID)_$(FIRST_RELEASE).obo ontologies/$(ID)_$(LAST_RELEASE).obo
+	runoak -i simpleobo:ontologies/$(ID)_$(FIRST_RELEASE).obo diff -X simpleobo:ontologies/$(ID)_$(LAST_RELEASE).obo --statistics -o $@.yaml
+	robot diff --left ontologies/$(ID)_$(FIRST_RELEASE).obo --right ontologies/$(ID)_$(LAST_RELEASE).obo -o $@
 .PRECIOUS: stats/hp_diff.txt
 
 stats/%_diff_summary.txt: stats/%_diff.txt
@@ -74,3 +84,17 @@ stats/%_diff_summary.txt: stats/%_diff.txt
 	grep -E "[+] AnnotationAssertion.*IAO_0000115" $< | wc -l >> $@
 	echo "New or updated synonyms: " >> $@
 	grep -E "[+] AnnotationAssertion.*Synonym" $< | wc -l >> $@
+
+stats/%_statistics_summary.txt: ontologies/latest_%.obo
+	runoak -i simpleobo:ontologies/latest_$*.obo statistics --group-by-prefix > $@
+
+
+### This is to generate stats on a by-user level, which is great for contribution measurement
+
+stats/grh_by_user_%.md:
+	mkdir -p stats/
+	grainyhead -s $* metrics --from=$(START_DATE) --to=$(END_DATE) --selector 'user:*' > $@
+
+
+mondo-paper-2023:
+	$(MAKE) START_DATE=2020-01-01 END_DATE=2023-12-31 stats/grh_by_user_mondo.md

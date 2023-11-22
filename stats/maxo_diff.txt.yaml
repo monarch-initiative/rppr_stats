@@ -1,13 +1,11 @@
 __RESIDUAL__:
-  NodeTextDefinitionChange: 204
-  RemoveSynonym: 243
-  NewSynonym: 226
   NodeMove: 232
-  NewTextDefinition: 19
+  NewSynonym: 226
+  RemoveSynonym: 243
   NodeRename: 53
-  NodeDeletion: 4
   EdgeDeletion: 31
   NodeObsoletionWithDirectReplacement: 4
+  NodeDeletion: 4
   ClassCreation: 198
   All_Obsoletion: 4
   All_Synonym: 469
