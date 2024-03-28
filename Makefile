@@ -21,12 +21,8 @@ hpo-rppr-2024:
 	make START_DATE=2023-07-01 END_DATE=2024-06-30 FIRST_RELEASE=2023-06-17 LAST_RELEASE=2024-03-06 stats/grainyhead_hp.md stats/hp_diff.txt
 
 p1-rppr-2024:
-	make START_DATE=2023-06-01 END_DATE=2024-05-31 FIRST_RELEASE=2023-06-01 LAST_RELEASE=2024-03-04 stats/grainyhead_mondo.md stats/mondo_diff.txt
-	make START_DATE=2023-06-01 END_DATE=2024-05-31 FIRST_RELEASE=2023-06-07 LAST_RELEASE=2024-01-12 stats/grainyhead_oba.md stats/oba_diff.txt
-
-p1-rppr-x:
-	make START_DATE=2023-06-01 END_DATE=2024-05-31 FIRST_RELEASE=2023-06-01 LAST_RELEASE=2024-03-04 stats/mondo_diff.txt
-	make START_DATE=2023-06-01 END_DATE=2024-05-31 FIRST_RELEASE=2023-06-07 LAST_RELEASE=2024-01-12 stats/oba_diff.txt
+	#make START_DATE=2023-06-01 END_DATE=2024-05-31 FIRST_RELEASE=2023-06-01 LAST_RELEASE=2024-03-04 stats/grainyhead_mondo.md stats/mondo_diff.txt
+	make START_DATE=2023-06-01 END_DATE=2024-05-31 FIRST_RELEASE=2023-06-07 LAST_RELEASE=2024-03-27 stats/grainyhead_oba.md stats/oba_diff.txt
 
 
 exomiser-rppr:
@@ -60,9 +56,17 @@ ontologies/mondo_%.obo:
 	mkdir -p ontologies/
 	wget "http://purl.obolibrary.org/obo/mondo/releases/$*/mondo-base.obo" -O $@
 
+ontologies/mondo_%-simple.obo: ontologies/mondo_%.obo
+	robot remove -i $< --base-iri http://purl.obolibrary.org/obo/MONDO_ --axioms external --preserve-structure false --trim false \
+	 -O $@
+
 ontologies/hp_%.obo:
 	mkdir -p ontologies/
 	wget "http://purl.obolibrary.org/obo/hp/releases/$*/hp-base.obo" -O $@
+
+ontologies/oba_%.obo:
+	mkdir -p ontologies/
+	wget "http://purl.obolibrary.org/obo/oba/releases/$*/oba-base.obo" -O $@
 
 ontologies/hp_2022-06-11.obo:
 	mkdir -p ontologies/
@@ -85,6 +89,14 @@ ontologies/maxo_%.obo:
 
 stats/mondo_diff.txt:
 	$(eval ID := mondo)
+	mkdir -p stats/
+	$(MAKE) ontologies/$(ID)_$(FIRST_RELEASE).obo ontologies/$(ID)_$(LAST_RELEASE).obo
+	runoak -i simpleobo:ontologies/$(ID)_$(FIRST_RELEASE).obo diff -X simpleobo:ontologies/$(ID)_$(LAST_RELEASE).obo --statistics -o $@.yaml
+	robot diff --left ontologies/$(ID)_$(FIRST_RELEASE).obo --right ontologies/$(ID)_$(LAST_RELEASE).obo -o $@
+.PRECIOUS: stats/mondo_diff.txt
+
+stats/oba_diff.txt:
+	$(eval ID := oba)
 	mkdir -p stats/
 	$(MAKE) ontologies/$(ID)_$(FIRST_RELEASE).obo ontologies/$(ID)_$(LAST_RELEASE).obo
 	runoak -i simpleobo:ontologies/$(ID)_$(FIRST_RELEASE).obo diff -X simpleobo:ontologies/$(ID)_$(LAST_RELEASE).obo --statistics -o $@.yaml
