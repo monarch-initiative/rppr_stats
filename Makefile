@@ -24,6 +24,11 @@ p1-rppr-2024:
 	make START_DATE=2023-06-01 END_DATE=2024-05-31 FIRST_RELEASE=2023-06-01 LAST_RELEASE=2024-03-04 stats/grainyhead_mondo.md stats/mondo_diff.txt
 	make START_DATE=2023-06-01 END_DATE=2024-05-31 FIRST_RELEASE=2023-06-07 LAST_RELEASE=2024-01-12 stats/grainyhead_oba.md stats/oba_diff.txt
 
+p1-rppr-x:
+	make START_DATE=2023-06-01 END_DATE=2024-05-31 FIRST_RELEASE=2023-06-01 LAST_RELEASE=2024-03-04 stats/mondo_diff.txt
+	make START_DATE=2023-06-01 END_DATE=2024-05-31 FIRST_RELEASE=2023-06-07 LAST_RELEASE=2024-01-12 stats/oba_diff.txt
+
+
 exomiser-rppr:
 	make stats/grainyhead_exomiser.md START_DATE=2023-04-01 END_DATE=2024-03-31
 
