@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "rppr-stats"
+version = "0.1.0"
+description = ""
+authors = ["Nicolas Matentzoglu <nicolas.matentzoglu@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+grainyhead = "^0.3.1"
+oaklib = "^0.5.32"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
