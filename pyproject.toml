@@ -7,9 +7,10 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-grainyhead = "^0.3.1"
-oaklib = "^0.5.32"
-
+#grainyhead = "^0.3.1"
+grainyhead = { git = "https://github.com/gouttegd/grainyhead.git", branch = "master" }
+oaklib = "^0.5.33"
+#oaklib = { git = "https://github.com/INCATools/ontology-access-kit.git", branch = "h2-patch-2" }
 
 [build-system]
 requires = ["poetry-core"]
