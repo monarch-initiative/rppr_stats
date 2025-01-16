@@ -1,0 +1,18 @@
+__RESIDUAL__:
+  EdgeDeletion: 20507
+  EdgeCreation: 30745
+  NodeDeletion: 136
+  RemoveTextDefinition: 68
+  AddNodeToSubset: 686
+  ClassCreation: 295
+  NewSynonym: 319
+  NewTextDefinition: 176
+  NodeTextDefinitionChange: 111
+  RemoveNodeFromSubset: 40
+  NodeRename: 44
+  NodeObsoletion: 9
+  RemoveSynonym: 62
+  NodeObsoletionWithDirectReplacement: 8
+  NodeCreation: 1
+  All_Obsoletion: 17
+  All_Synonym: 381

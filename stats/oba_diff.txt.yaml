@@ -1,0 +1,12 @@
+__RESIDUAL__:
+  EdgeCreation: 28102
+  ClassCreation: 1242
+  NewTextDefinition: 621
+  NewSynonym: 764
+  EdgeDeletion: 43
+  RemoveSynonym: 13
+  NodeTextDefinitionChange: 15
+  NodeRename: 18
+  NodeDeletion: 1
+  All_Obsoletion: 0
+  All_Synonym: 777
