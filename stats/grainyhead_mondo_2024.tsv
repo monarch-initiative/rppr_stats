@@ -1,0 +1,4 @@
+Date	Selector	Selector name	Issues opened	Issues closed	Pull requests opened	Pull requests closed	Pull requests merged	Comments	Commits	Releases	Contributors
+2024-12-31	all	Total	642	653	787	782	667	2024	689	12	111
+2024-12-31	team:monarch-ontology-team	Internal	191	272	496	364	289	1201	445	0	13
+2024-12-31	!team:monarch-ontology-team	External	451	381	291	418	378	823	244	12	98
