@@ -1,20 +1,20 @@
 __RESIDUAL__:
-  ClassCreation: 6314
-  MappingCreation: 60998
-  EdgeCreation: 29468
-  NodeTextDefinitionChange: 3984
-  RemoveSynonym: 14210
   EdgeDeletion: 21293
+  EdgeCreation: 29468
   RemoveMapping: 26034
-  NodeDeletion: 397
-  NewSynonym: 23801
-  AddNodeToSubset: 65779
-  NodeRename: 3798
+  MappingCreation: 60998
   RemoveNodeFromSubset: 6272
+  AddNodeToSubset: 65779
+  RemoveSynonym: 14210
+  NewSynonym: 23801
+  NodeRename: 3798
   NodeObsoletion: 1515
+  ClassCreation: 6314
   NewTextDefinition: 3219
-  RemoveTextDefinition: 317
+  NodeTextDefinitionChange: 3984
+  NodeDeletion: 397
   NodeObsoletionWithDirectReplacement: 613
+  RemoveTextDefinition: 317
   NodeCreation: 11
   All_Obsoletion: 2128
   All_Synonym: 38011
